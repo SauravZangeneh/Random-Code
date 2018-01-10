@@ -14,7 +14,7 @@ public class Add{
 		String random = String.valueOf(i); 
 		char[] dummy = random.toCharArray();  //converts integer to array of characters
 
-		String random2 = String.valueOf(j);
+		String random2 = String.valueOf(j);   // the if statements are used to convert unequal lengths of integers to the same length by adding 0s before the integer
 		char[] dummy2 = random2.toCharArray();
 
 		if (dummy2.length >= dummy.length){
@@ -50,7 +50,7 @@ public class Add{
 			store = Character.getNumericValue(digits[m-1]) + Character.getNumericValue(digits2[m-1]) + carry; // converts characters to digits and adds them
 			carry = 0;
 		
-			if (store>9){
+			if (store>9){   // this statement allows you to 'carry the one'.
 				store = store%10;
 				carry = 1;
 			}
@@ -67,6 +67,6 @@ public class Add{
 
 	public static void main(String[] args){
 		Add addobject = new Add();
-		addobject.addmethod(1234,999);
+		addobject.addmethod(1234,999);  //testing
 	}
 }
